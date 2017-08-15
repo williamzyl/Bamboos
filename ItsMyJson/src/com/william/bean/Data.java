@@ -13,6 +13,11 @@ public class Data {
 	public void setData(Map<String, List<Video>> data) {
 		this.data = data;
 	}
+
+	@Override
+	public String toString() {
+		return "Data [data=" + data + "]";
+	}
 	
 	
 
