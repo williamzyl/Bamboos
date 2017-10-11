@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="resourcebean" class="com.zeratul.ResourceBean" init-method="init" destroy-method="destroy">
+<property name="file" value="C:\Users\zhangyl\Desktop\test.txt"></property>
+</bean>
+
+<bean id="dependbean" class="com.zeratul.DependentBean" init-method="init" destroy-method="destroy" depends-on="resourcebean">
+ <property name="resourceBean" ref="resourcebean"/>  
+</bean>
+
+
+</beans>
