@@ -21,4 +21,35 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 </bean>
 
 
+<bean id="boolean" class="com.zeratul.Person">
+<constructor-arg name="idCard" value="3"></constructor-arg>
+<constructor-arg name="name" value="Zeratul_3"></constructor-arg>
+<constructor-arg name="student" value="no"></constructor-arg>
+</bean>
+
+
+<bean id="computer" class="com.zeratul.Computer">
+<constructor-arg name="version" value="hkc"></constructor-arg>
+<constructor-arg name="brand" value="dell"></constructor-arg>
+</bean>
+
+<bean id="computer_2" class="com.zeratul.Computer">
+<constructor-arg name="version" value="win7"></constructor-arg>
+<constructor-arg name="brand" value="rainbow"></constructor-arg>
+</bean>
+
+<bean id="zeratul" class="com.zeratul.Person">
+<!-- <constructor-arg name="idCard" value="3"></constructor-arg>
+<constructor-arg name="name" value="Zeratul_3"></constructor-arg>
+<constructor-arg name="student" value="no"></constructor-arg> -->
+<property name="computer" ><ref bean="computer"/></property>
+</bean>
+
+<bean id="zeratul_2" class="com.zeratul.Person">
+<!-- <constructor-arg name="idCard" value="3"></constructor-arg>
+<constructor-arg name="name" value="Zeratul_3"></constructor-arg>
+<constructor-arg name="student" value="no"></constructor-arg>
+<property name="computer"><idref bean="computer_2"/></property> -->
+</bean>
+
 </beans>
